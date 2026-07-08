@@ -1,0 +1,108 @@
+:root {
+    --background-color: #ffffff;
+    --text-color: #333333;
+    --accent-color: #004d4f;
+    --font-family: 'Helvetica Neue', Arial, sans-serif;
+    --base-font-size: 16px;
+    --line-height: 1.6;
+    --spacing-unit: 1rem;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    font-size: var(--base-font-size);
+    line-height: var(--line-height);
+    margin: 0;
+    padding: var(--spacing-unit);
+}
+
+h1, h2, h3 {
+    margin-bottom: calc(var(--spacing-unit) * 0.5);
+}
+
+h1 {
+    font-size: calc(var(--base-font-size) * 2.5);
+}
+
+h2 {
+    font-size: calc(var(--base-font-size) * 2);
+}
+
+h3 {
+    font-size: calc(var(--base-font-size) * 1.5);
+}
+
+p {
+    margin-bottom: var(--spacing-unit);
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+a:hover, a:focus {
+    color: #002d2e;
+    transform: translateY(-2px);
+}
+
+button {
+    background-color: var(--accent-color);
+    color: var(--background-color);
+    border: none;
+    border-radius: 4px;
+    padding: calc(var(--spacing-unit) * 0.5) var(--spacing-unit);
+    font-family: var(--font-family);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover, button:focus {
+    background-color: #003f40;
+    transform: translateY(-2px);
+}
+
+input[type="text"], input[type="email"], textarea {
+    border: none;
+    border-bottom: 1px solid var(--accent-color);
+    padding: calc(var(--spacing-unit) * 0.5) 0;
+    width: 100%;
+    transition: border-bottom-color 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+    border-bottom-color: #003f40;
+    outline: none;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--spacing-unit);
+}
+
+@media (min-width: 600px) {
+    nav {
+        justify-content: flex-start;
+    }
+    
+    nav a {
+        margin-right: var(--spacing-unit);
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fade-in 0.5s ease forwards;
+}
